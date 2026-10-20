@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function evenOdd(number){
+            if(number%2==0){
+                return("even")
+            }
+            else return("odd")
+        }
+        console.log(evenOdd(44))
+        function prime(number){
+            if(number<1)
+            return "enter number greater than or equal to 1"
+        if(number==1)
+        return "neither prime nor composite"
+            let flag=1
+            for(let i=2;i<=Math.sqrt(number);i++){
+if(number%i==0)
+flag=0
+            }
+            if(flag==1)
+            return("prime")
+        else return("not prime")
+        }
+               console.log( prime(1))
+        function revString(str){
+            let reverse=""
+         for(let char of str){
+reverse=char+reverse
+         }
+         return(reverse)
+        }console.log(revString("world"))
+        function sum(number){
+            let res=0
+            for(let i=1;i<=number;i++){
+                res+=i
+            }
+            return(res)
+        }
+       console.log( sum(5))
+    </script>
+</body>
+</html>
