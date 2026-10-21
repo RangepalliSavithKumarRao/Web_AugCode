@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <p id="myp">Good morning user</p>
+    <button id="btn">Login</button>
+    <div id="mydiv">This is a div container</div>
+    <p id="abc">This is an old dull</p>
+    <script>
+        const paraTag=document.getElementById("myp")
+        console.log(paraTag.textContent)
+        paraTag.textContent="Welcome user"
+        const btnn=document.querySelector("#btn")
+        btnn.textContent="logout"
+        const container=document.getElementById("mydiv")
+        container.innerHTML="<h2>hello world </h2>"
+        container.innerHTML=`<h2>Hello guys</h2>
+        <button>this is a button</button>
+        <img src="https://images.pexels.com/photos/40381741/pexels-photo-40381741.jpeg" height="400px" width="400px">`
+   const p=document.getElementById("abc")
+   p.style.color="silver"
+   p.style.backgroundColor="blue"
+   p.style.textAlign="center"
+   p.textContent="This is new line"     
+   
+   </script>
+
+</body>
+</html>

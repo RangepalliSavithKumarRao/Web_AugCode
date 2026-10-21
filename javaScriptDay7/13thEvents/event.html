@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="search" id="mySearch">
+    <div style="background-color:cyan; width:400px ;height:400px" id="abc">Hello user</div>
+    <script>
+        const inp=document.getElementById("mySearch")
+        // inp.addEventListener('keyup',function(x){
+        //     console.log("key released", x.key)
+        // })
+        // inp.addEventListener('keydown',function(x){
+        //     console.log("key pressed", x.key)
+        // })
+        // inp.addEventListener('change', function(e){
+        //     console.log("target value is", e.target.value)
+        // })
+        const box=document.getElementById("abc")
+        box.addEventListener('mouseover',function(){
+            box.style.backgroundColor="green"
+            box.style.color="white"
+        })
+        box.addEventListener('mouseout', function(){
+            box.style.backgroundColor="orange"
+            box.style.color="gold"
+            box.style.transition='1s'
+        })
+
+        
+    </script>
+</body>
+</html>

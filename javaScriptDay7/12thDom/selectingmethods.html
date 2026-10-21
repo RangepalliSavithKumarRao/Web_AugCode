@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myp">hello guys welcome to js</p>
+    <div class="box">This is box 0</div>
+    <div class="box">This is box 1</div>
+    <p> Hello world</p>
+        <div class="xyz">This is box 0</div>
+    <div class="xyz" id="abc">This is box 1</div>
+    <script>
+const para=document.getElementById("myp")
+console.log(para)
+const container=document.getElementsByClassName("box")
+console.log(container)
+console.log(container[0])
+const paragraph=document.getElementsByTagName("p")
+console.log(paragraph)
+console.log(paragraph[0])
+const box=document.querySelector(".xyz")
+console.log(box)
+const box2=document.querySelectorAll(".xyz")
+console.log(box2)
+console.log(box2[1])
+    </script>
+
+</body>
+</html>
