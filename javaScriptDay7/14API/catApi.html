@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img height="400px" width="400px" id="cat" >
+    <button id="btn" >Get cat</button>
+    
+    <script>
+                    const bu=document.getElementById("btn")
+
+        function getImage(){
+
+            const image=document.getElementById("cat")
+         fetch('https://coffee.alexflipnote.dev/random.json')
+         
+.then(response=>response.json())
+.then(data=>console.log(data.imageUrl))
+
+.catch(err=>console.log('Error Get Image', err))
+        
+        }
+        bu.addEventListener('click',function(){
+            getImage()
+        })
+        
+       
+         
+    </script>
+</body>
+</html>
