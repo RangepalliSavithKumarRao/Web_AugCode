@@ -4,31 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    #div1 {
+  
+   text-align: center;
+     font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    </style>
 </head>
 <body>
-<!-- <img id="abc">
-   
-<button onclick="getMovie()" >get poster</button> -->
-    <script>
-    //    const imgd=document.getElementById("abc")
+    
+<div id="div1">
+    <input  id="in" placeholder="search">
+    <button id="btn" >get poster</button>
+    <h1 class="abc"></h1>
+    <p class="abc"></p>
+    <p class="abc"></p>   
+    <img class="abc">
+</div>
 
+<script>
+        const inp=document.getElementById('in')
+        const bu=document.getElementById("btn")
+       
+const divr=document.getElementById("div1")
+const divd=divr.querySelectorAll(".abc")
+
+
+inp.addEventListener('keydown',function(x){
+if(x.key==='Enter'){
+    bu.click()
+}
+})
+bu.addEventListener('click',function(){
+  
+    getMovie(inp.value)
+})
         async function getMovie(movieName){
             let url=`http://www.omdbapi.com/?t=${movieName}&apikey=c82a28be&`
             try{
              let response=await   fetch(url)
              let data=await response.json()
-             console.log(data.Poster)
-// imgd.src=data.Poster
+          
+
+divd[0].textContent="Title : "+data.Title
+divd[1].textContent="Release year : "+data.Year
+divd[2].textContent="Plot : "+data.Plot
+divd[3].src=data.Poster
+
+
             }
             catch(error){
 console.log('Error fetching data', error)
     }}
-    getMovie("Avengers")
-function extra(){
-    console.log("Hello user")
-}
-extra()
+   
+// function extra(){
+//     console.log("Hello user")
+// }
+// extra()
         
-    </script>
+</script>
 </body>
 </html>
