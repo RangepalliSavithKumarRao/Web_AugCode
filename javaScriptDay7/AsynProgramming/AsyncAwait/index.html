@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- <img id="abc">
+   
+<button onclick="getMovie()" >get poster</button> -->
+    <script>
+    //    const imgd=document.getElementById("abc")
+
+        async function getMovie(movieName){
+            let url=`http://www.omdbapi.com/?t=${movieName}&apikey=c82a28be&`
+            try{
+             let response=await   fetch(url)
+             let data=await response.json()
+             console.log(data.Poster)
+// imgd.src=data.Poster
+            }
+            catch(error){
+console.log('Error fetching data', error)
+    }}
+    getMovie("Avengers")
+function extra(){
+    console.log("Hello user")
+}
+extra()
+        
+    </script>
+</body>
+</html>
